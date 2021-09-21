@@ -6,6 +6,8 @@ public class WayPoint : MonoBehaviour
 {
     [SerializeField] GameObject towerPrefab;
     [SerializeField] bool isPlaceable;
+    public bool IsPlaceable { get { return isPlaceable;} } //Public allows other scripts too see (safer than public method, no overriting), Get property, Read Variable
+
     void OnMouseDown()
     {
         if (isPlaceable)
